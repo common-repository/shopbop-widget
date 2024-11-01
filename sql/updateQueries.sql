@@ -1,0 +1,11 @@
+ALTER TABLE `%PREFIX%shopbop_cache` DROP INDEX `update_requested`;
+CREATE INDEX `update_requested` on `%PREFIX%shopbop_cache` (`update_requested` ASC);
+ALTER TABLE `%PREFIX%shopbop_cache` MODIFY COLUMN `type` ENUM('marketing', 'pane1', 'pane2', 'pane3', 'promotion', 'category-keyword-links');
+DELETE FROM `%PREFIX%shopbop_cache` WHERE type='promotion';
+ALTER TABLE `%PREFIX%shopbop_category_assignments` ADD COLUMN `selector_id` INT DEFAULT 2 NOT NULL AFTER `post_id`;
+ALTER TABLE `%PREFIX%shopbop_category_assignments` ADD COLUMN `is_justarrived` INT DEFAULT 0 NOT NULL AFTER `is_random`;
+ALTER TABLE `%PREFIX%shopbop_category_assignments` ADD COLUMN `lastUpdated` datetime NOT NULL AFTER `is_justarrived`;
+ALTER TABLE `%PREFIX%shopbop_category_assignments` DROP PRIMARY KEY;
+INSERT `%PREFIX%shopbop_category_assignments` (`post_id`, `selector_id`, `category_path`, `use_default`, `is_random`, `is_justarrived`, `lastUpdated`) VALUES (-1, 1, '', 0, 0, 1, NOW());
+INSERT `%PREFIX%shopbop_category_assignments` (`post_id`, `selector_id`, `category_path`, `use_default`, `is_random`, `is_justarrived`, `lastUpdated`) VALUES (-1, 3, '', 0, 1, 0, NOW());
+ALTER TABLE `%PREFIX%shopbop_category_assignments` ADD PRIMARY KEY (`post_id`, `selector_id`);

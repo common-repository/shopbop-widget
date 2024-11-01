@@ -1,0 +1,22 @@
+/* Scss Document */
+
+body *[id^=shopbop-core-widget-].shopbop-core-widget,
+#shopbop-core-widget-1,
+#shopbop-core-widget-2, 
+#shopbop-core-widget-3,
+#shopbop-core-widget-4,
+#shopbop-core-widget-5 {
+	.shopbop-widget-header { padding: 20px 40px; justify-content: space-between;
+		&__logo-image { display: block; margin: 0 auto !important; width: 130px; height: 35px; text-indent: 150%;
+			overflow: hidden; white-space: nowrap; background: url(../images/shopbop-logo.svg) center no-repeat; }
+		&__message { margin: 1em 0 2em; }
+		&__nav { text-align: center; }
+	}
+
+	&.shopbob-bp--small .shopbop-widget-header {
+		& { display: flex; width: 100%; }
+		&__logo { width: 265px; flex-shrink: 0; }
+		&__message { display: none; }
+		&__nav { flex-grow: 1; align-self: flex-end; }
+	}
+}

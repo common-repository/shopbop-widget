@@ -1,0 +1,58 @@
+/* Scss Document */
+/* RESET STYLING */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+body *[id^=shopbop-core-widget-].shopbop-core-widget,
+#shopbop-core-widget-1,
+#shopbop-core-widget-2, 
+#shopbop-core-widget-3,
+#shopbop-core-widget-4,
+#shopbop-core-widget-5 {
+	color: #000;
+	box-shadow: none;
+	box-sizing: border-box;
+	background: none repeat scroll 0 0 transparent;
+    float: none;
+    font-size: 100%;
+    font-style: normal;
+    height: auto;
+    left: auto;
+    margin: 0;
+    outline: 0 none;
+    text-decoration: none;
+    text-transform: none;
+    top: auto;
+    vertical-align: baseline;
+    font: 12px/28px 'GT-America-Standard', Arial, sans-serif;
+    clear: both;
+    margin-bottom: 16px;
+	
+	* {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		line-height: 1;
+		background: none;
+		box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+		outline: none !important;
+		letter-spacing: 0;
+		list-style: none;
+		box-sizing: border-box;
+		&:before, &:after { display: none; }
+	}
+	.shopbop-widget {
+		font-size: 16px;
+		font-family: 'GT-America-Standard', Arial, sans-serif;
+	}
+  	.sb_pixel_img{display:none;}
+
+}
+
+/* END RESET STYLING */

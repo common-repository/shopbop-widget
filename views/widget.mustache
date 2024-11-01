@@ -1,0 +1,136 @@
+<div id="shopbop-core-widget-{{id}}" class="shopbop-core-widget shopbop-mobile {{#shopBotWidgetForceLocation}}shopbop-core-widget--temp-location{{/shopBotWidgetForceLocation}}"
+    style="{{#width}}width: {{width}};{{/width}}{{#maxWidth}}max-width: {{maxWidth}}px;{{/maxWidth}}"
+    {{#shopBotWidgetForceLocation}}data-forcelocation="{{shopBotWidgetForceLocation}}"{{/shopBotWidgetForceLocation}}
+    data-lang="{{#langCode}}{{langCode}}{{/langCode}}{{^langCode}}en-us{{/langCode}}">
+	<div class="shopbop-widget-wrapper shopbop-widget-theme-light">
+
+		<div class="shopbop-widget-header">
+            <div class="shopbop-widget-header__logo">
+                <a class="shopbop-widget-header__logo-image" href="http://www.shopbop.com/actions/designerindex/viewAllDesigners.action" target="_blank" rel="nofollow">
+                Shopbop.com</a>
+            </div>
+
+            <div class="shopbop-widget-marketing-message shopbop-widget-header__message">
+                {{#marketingMessage}}
+                    {{{marketingMessage}}}
+                {{/marketingMessage}}
+                {{^marketingMessage}}
+                    <p>
+                        <a href="http://www.shopbop.com/ci/aboutShopBop/returnpolicy.html"
+                            class="shopbop-widget-marketing-message-anchor"
+                            target="_blank" rel="nofollow">{{freeShippingEverywhereText}}</a>
+                    </p>
+                {{/marketingMessage}}
+            </div>
+
+            <div class="shopbop-widget-header__nav">
+                <ul class="shopbop-widget-header__nav-list ">
+                {{#panes}}
+                    <li>
+                        <a class="shopbop-widget-header__nav-item shopbop-pane-button shopbop-pane-button{{number}}" data-shopbop-panel="panel{{number}}" href="#">{{title}}</a>
+                    </li>
+                {{/panes}}
+                </ul>
+            </div>
+		</div>
+
+        <div class="shopbop-widget-body">
+
+            <div class="shopbop-widget-feature-block">
+                {{^promotion}}
+                <div class="shopbop-widget-feature shopbop-widget-promotion">
+                    <p></p>
+                </div>
+                {{/promotion}}
+                {{#promotion}}
+                <div class="shopbop-widget-feature shopbop-widget-promotion-defined shopbop-product-dynamic-link">
+                    {{{content}}}
+                </div>
+                {{/promotion}}
+
+                <div class="shopbop-widget-marketing-message shopbop-product-dynamic-link">
+                    {{#marketingMessage}}
+                        {{{marketingMessage}}}
+                    {{/marketingMessage}}
+                    {{^marketingMessage}}
+                        <p>
+                            <a href="http://www.shopbop.com/ci/aboutShopBop/returnpolicy.html"
+                                class="shopbop-widget-marketing-message-anchor"
+                                target="_blank" rel="nofollow">{{freeShippingEverywhereText}}</a>
+                        </p>
+                    {{/marketingMessage}}
+                </div>
+            </div>
+
+            <div class="shopbop-widget-content-panes ">
+                <!--div class="shopbop-widget-feature shopbop-widget-promotion-defined shopbop-product-dynamic-link">
+                    <p class="shopbop-widget-promotion">&nbsp;</p>
+                </div-->
+
+                {{#panes}}
+                <div class="shopbop-widget-panel{{number}} shopbop-content-pane shopbop-widget-carousel" >
+                    <h2>{{title}}</h2>
+                        <ul>
+                            {{#items}}
+                            <li>
+                                <a class="shopbop-product-link shopbop-product-link-img" href="{{{url}}}" target="_blank" rel="nofollow">
+                                    <img src="{{{imageUrl}}}" alt="" />
+                                    <span class="shopbop-widget-carousel-mask"></span>
+                                </a>
+                                <div class="shopbop-widget-carousel-description">
+                                    <div class="shopbop-widget-carousel-description-inside shopbop-clearfix">
+                                        <h3>
+                                            <a class="shopbop-product-link" href="{{{itemUrl}}}" target="_blank" {{#noFollow}}rel="nofollow"{{/noFollow}}>
+                                                {{ellidedBrandName}}
+                                            </a>
+                                        </h3>
+                                        <h4>{{ellidedAnchorText}}</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/items}}
+                        </ul>
+
+                    <a class="shopbop-widget-carousel-arrow shopbop-widget-carousel-prev" href="#" style="display: none;">&lt;</a>
+                    <a class="shopbop-widget-carousel-arrow shopbop-widget-carousel-next" href="#" style="display: none;">&gt;</a>
+                    <a class="shopbop-widget-carousel-info" target="_blank" style="display: none;"></a>
+                    <div class="shopbop-widget-carousel-pager"></div>
+                </div>
+                {{/panes}}
+            </div>
+        </div>
+
+	</div>
+    <div class="shopbop-widget-footer">
+        {{#categoryKeywordLinks.0}}
+            <div class="shopbop-widget-footer-links">
+                <p><span class="category-keyword-links">{{categoryKeywordLinksPrefix}} {{#categoryKeywordLinks}}<a href="{{{url}}}" target="_blank" {{#noFollow}}rel="nofollow"{{/noFollow}}>{{anchorText}}</a>{{^lastItem}}, {{/lastItem}}{{/categoryKeywordLinks}} {{categoryKeywordLinksSuffix}}. </span><a class="shopbop-widget-footer-get-widget" href="http://www.shopbop.com/go/widgets" target="_blank" rel="nofollow">{{getThisWidgetText}}<span class="category-keyword-links">.</span></a></p>
+            </div>
+        {{/categoryKeywordLinks.0}}
+        {{^categoryKeywordLinks.0}}
+            <div class="shopbop-widget-footer-links">
+                <p><a class="shopbop-widget-footer-get-widget" href="http://www.shopbop.com/go/widgets" target="_blank" rel="nofollow">{{getThisWidgetText}}.</a></p>
+            </div>
+        {{/categoryKeywordLinks.0}}
+    </div>
+    {{#ga.status}}<script src="{{{ga.url}}}" type="text/javascript" ></script>{{/ga.status}}
+    <script type="text/javascript">
+        if(typeof SWJquery !== 'undefined')
+        {
+            SWJquery(window).resize();
+        }
+    </script>
+    <noscript>
+        <style>
+        .shopbop-widget-wrapper
+        {
+             visibility: visible !important;
+        }
+        .shopbop-widget-loading-bg
+        {
+            display:none !important;
+        }
+        </style>
+    </noscript>
+    <div class="shopbop-widget-loading-bg"><i class="shopbop-widget-loading-icon"></i></div>
+</div>

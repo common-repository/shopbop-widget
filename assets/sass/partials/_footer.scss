@@ -1,0 +1,72 @@
+/* Scss Document */
+
+body *[id^=shopbop-core-widget-].shopbop-core-widget,
+	#shopbop-core-widget-1,
+	#shopbop-core-widget-2, 
+	#shopbop-core-widget-3,
+	#shopbop-core-widget-4,
+	#shopbop-core-widget-5 {
+		.shopbop-widget-footer{
+			background: #f4b28e;
+			display: block;
+			padding: 10px 30px;
+			text-align: center;
+			min-height: 28px;
+			color: #fff;
+
+			.shopbop-widget-footer-links{
+				display: block;
+				width: 100%;
+				padding: 0px;
+
+				p{
+					display:block;
+					text-transform: capitalize;
+					font-weight:normal;
+					font-style: normal;
+					margin: 0;
+					font-size:15px;
+					color: #fff;
+					line-height: 1.5;
+					font-family: 'GT-America-Standard', Arial, sans-serif;
+
+					a{
+						color: $black;
+						color: #fff;
+						background:none;
+						font-size:15px;
+						font-weight: normal;
+						text-decoration: none;
+						padding:0px;
+						margin:0px;
+						font-family: 'GT-America-Standard', Arial, sans-serif;
+						&.shopbop-widget-footer-get-widget { font-weight:bold;
+							text-decoration: underline; white-space: nowrap; }
+					}
+					a:hover{
+						text-decoration: underline;
+					}
+				}
+
+			}
+		}
+
+		.shopbop-widget-footer-arrow{
+			height: 10px;
+			width:10px;
+			display:inline-block;
+			color: #fd7e07 !important;
+			background: url(../images/light.png) no-repeat -226px -8px;
+		}
+
+
+		&.shopbop-bp--small .shopbop-widget-footer { padding: 5px 30px 10px; }
+	}
+
+html[xmlns] .shopbop-clearfix{
+	display: block;
+}
+ 
+* html .shopbop-clearfix {
+	height: 1%;
+}

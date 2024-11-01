@@ -1,0 +1,56 @@
+/* Scss Document */
+
+body *[id^=shopbop-core-widget-].shopbop-core-widget,
+#shopbop-core-widget-1,
+#shopbop-core-widget-2, 
+#shopbop-core-widget-3,
+#shopbop-core-widget-4,
+#shopbop-core-widget-5 {
+	.shopbop-widget-header {
+		&__nav {
+			li {
+				display: inline-block;
+				color: $black;
+
+				a {
+					position: relative;
+					display: block;
+					font-size: 16px;
+					font-weight: normal;
+					margin: 0 10px 10px 0 !important;
+					font-family: 'GT-America-Standard', Arial, sans-serif;
+					color: $black !important;
+					letter-spacing: 0;
+					text-decoration: none;
+				}
+				a.selected {
+					color: $black !important;
+					font-weight: bold;
+				}
+				a.hover {
+					color: $black !important;
+				}
+				a.focus {
+					color: $black;
+				}
+				a.active {
+					color: $black !important;
+				}
+				a:after {
+					content: '';
+					position: absolute;
+					display: block;
+					height: 1px;
+					left: 0px;
+					bottom: -5px;
+					width: 0px;
+					transition: all .5s ease 0s;
+					background: $orange;
+				}
+				a.selected:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

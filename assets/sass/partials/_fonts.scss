@@ -1,0 +1,36 @@
+/* Scss Document */
+
+@font-face {
+    font-family: 'GT-America-Standard-Bold';
+    src: url('.../assets/fonts/GT-America-Standard-Bold.eot');
+    src: url('.../fonts/GT-America-Standard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('.../fonts/GT-America-Standard-Bold.woff') format('woff'),
+        url('.../fonts/GT-America-Standard-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'GT-America-Standard-Medium';
+    src: url('../assets/fonts/GT-America-Standard-Medium.eot');
+    src: url('../assets/fonts/GT-America-Standard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/GT-America-Standard-Medium.woff') format('woff'),
+        url('../assets/fonts/GT-America-Standard-Medium.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'GT-America-Standard-Light';
+    src: url('../assets/fonts/GT-America-Standard-Light.eot');
+    src: url('../assets/fonts/GT-America-Standard-Light.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/GT-America-Standard-Light.woff') format('woff'),
+        url('../assets/fonts/GT-America-Standard-Light.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
